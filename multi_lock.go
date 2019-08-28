@@ -89,17 +89,17 @@ var (
 )
 
 func Lock(key interface{}) {
-	defaultLock.Lock()
+	defaultLock.Lock(key)
 }
 
-func RLock(key, interface{}) {
-	defaultLock.RLock()
+func RLock(key interface{}) {
+	defaultLock.RLock(key)
 }
 
 func Unlock(key interface{}) {
-	defaultLock.Unlock()
+	defaultLock.Unlock(key)
 }
 
 func RUnlock(key interface{}) {
-	defaultLock.RUnlock()
+	defaultLock.RUnlock(key)
 }
